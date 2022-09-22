@@ -10,7 +10,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { NavComponent } from './components/template/nav/nav.component';
-import { FormAgendarComponent } from './components/form-agendar/form-agendar.component';
+import { FormAgendarComponent } from './components/agendamento/form-agendar/form-agendar.component';
+import { FormConfirmaComponent } from './components/agendamento/form-confirma/form-confirma.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +19,7 @@ import { FormAgendarComponent } from './components/form-agendar/form-agendar.com
     FooterComponent,
     NavComponent,
     FormAgendarComponent,
+    FormConfirmaComponent,
 
   ],
   imports: [

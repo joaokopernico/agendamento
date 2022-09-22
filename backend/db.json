@@ -13,7 +13,8 @@
     }],
 
     "servico": [
-      { "id_servico": 1, 
+      { 
+      "id_servico": 1, 
       "nome_servico": "Corte Masculino",
       "descricao": "Corte Masculino personalizado",
       "valor": "25.50",
@@ -21,27 +22,33 @@
        }],
 
     "agendamento": [
-        { "id_agendamento": "1",
-           "id_cliente": "1",
-           "dt_agendamento": "20/09",
-           "observacao": "Cabelo longo" 
+        { "id_agendamento": 1,
+           "id_cliente": 1,
+           "id_servico": 1,
+           "dia_agend": "20",
+           "mes_agend": "09",
+           "id_horario": 1,
+           "status": 1,
+           "observacao": "Cabelo longo",
+           "id_pagamento": 1
     }],
 
-    "forma_de_pagamento": [
+    "horario": [
         {
-            "id_forma_pgto": "1",
-            "nome_pagamento": "Dinheiro"
+            "id_horario": 1,
+            "horas": "15:00"
+            
+
         }
     ],
 
-    "pagamento": [
+    "forma_de_pagamento": [
         {
-            "id_pagamento": "1",
-            "id_agendamento": "1",
-            "id_forma_pgto": "1"
-            
+            "id_forma_pgto": 1,
+            "nome_pagamento": "Dinheiro"
         }
     ]
+
 
     
 }

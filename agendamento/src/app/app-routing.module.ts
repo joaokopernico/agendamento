@@ -1,4 +1,4 @@
-import { FormAgendarComponent } from './components/form-agendar/form-agendar.component';
+import { FormAgendarComponent } from './components/agendamento/form-agendar/form-agendar.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
