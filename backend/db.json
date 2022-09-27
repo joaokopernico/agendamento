@@ -1,54 +1,65 @@
 {
-    "cliente": [
-      { "id": 1,
-       "nome": "João",
-        "cpf": "13066979997" ,
-        "dt_nascimento": "18/03/2002",
-        "id_endereco": "",
-        "telefone": "",
-        "celular": "43999362235",
-        "email": "joao@hotmail.com",
-        "dt_cadastro": "20/09/2022",
-        "dt_alteracao": ""
-    }],
-
-    "servico": [
-      { 
-      "id_servico": 1, 
+  "cliente": [
+    {
+      "id": 1,
+      "nome": "João",
+      "cpf": "13066979997",
+      "dt_nascimento": "18/03/2002",
+      "id_endereco": "",
+      "telefone": "",
+      "celular": "43999362235",
+      "email": "joao@hotmail.com",
+      "dt_cadastro": "20/09/2022",
+      "dt_alteracao": ""
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    }
+  ],
+  "servico": [
+    {
+      "id_servico": 1,
       "nome_servico": "Corte Masculino",
       "descricao": "Corte Masculino personalizado",
       "valor": "25.50",
       "duracao_minutos": "40"
-       }],
-
-    "agendamento": [
-        { "id_agendamento": 1,
-           "id_cliente": 1,
-           "id_servico": 1,
-           "dia_agend": "20",
-           "mes_agend": "09",
-           "id_horario": 1,
-           "status": 1,
-           "observacao": "Cabelo longo",
-           "id_pagamento": 1
-    }],
-
-    "horario": [
-        {
-            "id_horario": 1,
-            "horas": "15:00"
-            
-
-        }
-    ],
-
-    "forma_de_pagamento": [
-        {
-            "id_forma_pgto": 1,
-            "nome_pagamento": "Dinheiro"
-        }
-    ]
-
-
-    
+    }
+  ],
+  "agendamento": [
+    {
+      "id_agendamento": 1,
+      "id_cliente": 1,
+      "id_servico": 1,
+      "dia_agend": "20",
+      "mes_agend": "09",
+      "id_horario": 1,
+      "status": 1,
+      "observacao": "Cabelo longo",
+      "id_pagamento": 1
+    }
+  ],
+  "horario": [
+    {
+      "id_horario": 1,
+      "horas": "15:00"
+    }
+  ],
+  "forma_de_pagamento": [
+    {
+      "id_forma_pgto": 1,
+      "nome_pagamento": "Dinheiro"
+    }
+  ]
 }

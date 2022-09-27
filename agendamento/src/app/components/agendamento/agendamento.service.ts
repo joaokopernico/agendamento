@@ -9,7 +9,6 @@ export class AgendamentoService {
 
 
 EscolheDia(dia: number) {
-
  }
 
 }
