@@ -1,6 +1,11 @@
+import { Agendamento } from './../agendamento.model';
+import { ConfirmComponent } from '../confirm/confirm.component';
 import { AgendamentoService } from './../agendamento.service';
 import { Component, OnInit } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+
+
 
 @Component({
   selector: 'app-calendario',
@@ -10,13 +15,38 @@ import { RouterModule, Router } from '@angular/router';
 export class CalendarioComponent implements OnInit {
   dataAtual: Date = new Date();
   diasCalendario: Date[] = [];
+  mes: any;
+  idhorario: any;
+  idpagamento: any;
+  idservico: any
+
 
   constructor(
      private AgendamentoService: AgendamentoService,
-     private router: Router) { }
+     private router: Router,
+     private dialog: MatDialog
+     ) { }
+
+     openDialog(dia: any): void {
+
+
+      const dialogRef = this.dialog.open(ConfirmComponent, {
+        width: '250px',
+        data: {dia, mes: this.mes, idhorario: this.idhorario, idpagamento: this.idpagamento, idservico: this.idservico}      //
+     });
+
+       dialogRef.afterClosed().subscribe(result => {
+        console.log('Diálogo Fechado');
+        console.log(result)
+
+
+      })
+
+  }
 
   ngOnInit() {
     this.construirCalendario();
+
 
 
   }

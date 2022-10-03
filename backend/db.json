@@ -11,35 +11,11 @@
       "email": "joao@hotmail.com",
       "dt_cadastro": "20/09/2022",
       "dt_alteracao": ""
-    },
-    {
-      "id": 2
-    },
-    {
-      "id": 3
-    },
-    {
-      "id": 4
-    },
-    {
-      "id": 5
-    },
-    {
-      "id": 6
-    }
-  ],
-  "servico": [
-    {
-      "id_servico": 1,
-      "nome_servico": "Corte Masculino",
-      "descricao": "Corte Masculino personalizado",
-      "valor": "25.50",
-      "duracao_minutos": "40"
     }
   ],
   "agendamento": [
     {
-      "id_agendamento": 1,
+      "id": 1,
       "id_cliente": 1,
       "id_servico": 1,
       "dia_agend": "20",
@@ -52,14 +28,41 @@
   ],
   "horario": [
     {
-      "id_horario": 1,
+      "id": 1,
       "horas": "15:00"
+    },
+    {
+      "id": 2,
+      "horas": "16:00"
     }
   ],
   "forma_de_pagamento": [
     {
-      "id_forma_pgto": 1,
+      "id": 1,
       "nome_pagamento": "Dinheiro"
+    }
+  ],
+  "servico": [
+    {
+      "id": 1,
+      "nome": "Corte de Cabelo",
+      "descricao": "Cortando o cabelo",
+      "valor": 20,
+      "duracao": 40
+    },
+    {
+      "id": 2,
+      "nome": "Descoloração",
+      "descricao": "Descolorindo o cabelo",
+      "valor": 15,
+      "duracao": 30
+    },
+    {
+      "id": 3,
+      "nome": "Pintura",
+      "descricao": "Pintando o cabelo...",
+      "valor": 55,
+      "duracao": 55
     }
   ]
 }

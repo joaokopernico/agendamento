@@ -11,8 +11,11 @@
 .calendario-dias {
   display: grid;
   margin-top: 30px;
-  grid-template-columns: repeat(7, 1fr);
+  margin-left: 20rem;
+  margin-right: 20rem;
+  grid-template-columns: repeat(7, 5fr);
   text-align: center;
+  background-color: rgb(21, 0, 255);
 }
 
 .calendario-dias div {
@@ -23,4 +26,8 @@
 
 .calendario-dia-nao-faz-parte-mes-atual {
   color: #aaa;
+}
+
+.mat-button {
+  background-color: rgb(195, 255, 0);
 }

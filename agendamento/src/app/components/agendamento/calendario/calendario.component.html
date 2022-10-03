@@ -16,12 +16,17 @@
   </ng-container>
 
   <div *ngFor="let dia of diasCalendario; let i = index"
-  class="calendario-dia" routerLink="../confirma" [queryParams]="{dia:dia | date : 'dd', mes: dataAtual | date : 'MM'}"
+  class="calendario-dia" (click)="openDialog(dia)"
       [class.calendario-quebrar-linha]="i % 7 === 0"
       [class.calendario-dia-nao-faz-parte-mes-atual]="dataAtual.getMonth() !== dia.getMonth()" routerLinkActive="link-active">
      {{dia | date : 'dd'}}
   </div>
 </div>
+<br><br>
+<!-- <button mat-button (click)="openDialog(diasCalendario)">ABRIR DIALOGO</button> -->
+
+
+
 
 
 
