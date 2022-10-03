@@ -1,0 +1,39 @@
+<h2 mat-dialog-title> Agendamento para o dia {{dataD}}!</h2>
+
+<mat-dialog-content>
+
+  <h4>Confirmação de agendamento</h4>
+<mat-form-field appearance="fill">
+  <mat-label>Selecione o Serviço</mat-label>
+  <mat-select [(ngModel)]="selectService">
+    <mat-option *ngFor="let servico of servicos" [value]="servico.nome">
+      {{servico.nome}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Selecione o Horário</mat-label>
+  <mat-select [(ngModel)]="selectHorario">
+    <mat-option *ngFor="let horario of horarios" [value]="horario.horas">
+      {{horario.horas}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Selecione o Pagamento</mat-label>
+  <mat-select [(ngModel)]="selectPagamento">
+    <mat-option *ngFor="let pagamento of pagamentos" [value]="pagamento.nome_pagamento">
+      {{pagamento.nome_pagamento}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+
+
+
+<mat-dialog-actions>
+    <button class="mat-raised-button" (click)="showServices()">Cancelar</button>
+    <button class="mat-raised-button mat-primary" (click)="save(selectHorario,selectPagamento,selectService)">Confirmar</button>
+</mat-dialog-actions>
