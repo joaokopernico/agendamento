@@ -1,0 +1,24 @@
+<mat-card *ngIf="service && service !== null">
+  <mat-card-title>Excluir Produto</mat-card-title>
+  <form>
+      <mat-form-field>
+          <input matInput placeholder="Nome"
+          [value]="service.name" name="name" disabled>
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="Descrição"
+          [value]="service.description" name="description" disabled>
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="Preço (R$)"
+          [value]="service.price" name="price" disabled>
+      </mat-form-field>
+  </form>
+  <button mat-raised-button (click)="deleteService()" color="warn">
+      Excluir
+  </button>
+
+  <button mat-raised-button (click)="cancel()">
+      Cancelar
+  </button>
+</mat-card>

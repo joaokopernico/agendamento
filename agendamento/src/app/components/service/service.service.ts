@@ -36,4 +36,14 @@ export class ServiceService {
     const url = `${this.baseUrl}/${id}`
     return this.http.get<Service>(url);
   }
+
+  update(service: Service): Observable<Service> {
+    const url = `${this.baseUrl}/${service.id}`
+    return this.http.put<Service>(url, service)
+  }
+
+  delete(id: number): Observable<Service> {
+    const url = `${this.baseUrl}/${id}`
+    return this.http.delete<Service>(url)
+  }
 }

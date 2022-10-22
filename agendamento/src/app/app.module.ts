@@ -32,6 +32,8 @@ import { ServiceCreateComponent } from './components/service/service-create/serv
 import { ServiceReadComponent } from './components/service/service-read/service-read.component';
 import localePt from '@angular/common/locales/pt';
 import { MatTableModule } from '@angular/material/table';
+import { ServiceUpdateComponent } from './components/service/service-update/service-update.component';
+import { ServiceDeleteComponent } from './components/service/service-delete/service-delete.component';
 
 registerLocaleData(localeBr);
 
@@ -48,9 +50,8 @@ registerLocaleData(localeBr);
     ServiceCrudComponent,
     ServiceCreateComponent,
     ServiceReadComponent,
-
-
-
+    ServiceUpdateComponent,
+    ServiceDeleteComponent
   ],
   imports: [
     BrowserModule,

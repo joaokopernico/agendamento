@@ -1,3 +1,5 @@
+import { ServiceDeleteComponent } from './components/service/service-delete/service-delete.component';
+import { ServiceUpdateComponent } from './components/service/service-update/service-update.component';
 import { ServiceCrudComponent } from './views/service-crud/service-crud.component';
 import { ServiceCreateComponent } from './components/service/service-create/service-create.component';
 import { HomeComponent } from './views/home/home.component';
@@ -12,6 +14,8 @@ const routes: Routes = [
   // {path: "agendamento/confirma", component: FormConfirmaComponent},
   {path: "servicos/create", component: ServiceCreateComponent},
   {path: "servicos", component: ServiceCrudComponent},
+  {path: "servicos/update/:id", component: ServiceUpdateComponent},
+  {path: "servicos/delete/:id", component: ServiceDeleteComponent}
 ];
 
 @NgModule({
