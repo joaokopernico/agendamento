@@ -1,0 +1,21 @@
+<mat-card *ngIf="service && service !== null">
+  <mat-card-title>Alterar Produto</mat-card-title>
+  <form>
+      <mat-form-field>
+          <input matInput placeholder="Nome" [(ngModel)]="service.name" name="name">
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="Descrição" [(ngModel)]="service.description" name="description">
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="Preço (R$)" [(ngModel)]="service.price" name="price">
+      </mat-form-field>
+  </form>
+  <button mat-raised-button (click)="updateService()" color="primary">
+      Atualizar
+  </button>
+
+  <button mat-raised-button (click)="cancel()">
+      Cancelar
+  </button>
+</mat-card>

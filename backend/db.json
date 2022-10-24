@@ -58,25 +58,20 @@
   ],
   "servico": [
     {
-      "id": 1,
-      "nome": "Corte de Cabelo",
-      "descricao": "Cortando o cabelo",
-      "valor": 20,
-      "duracao": 40
-    },
-    {
       "id": 2,
       "nome": "Descoloração",
       "descricao": "Descolorindo o cabelo",
       "valor": 15,
-      "duracao": 30
+      "duracao": 30,
+      "name": "Teste alterar",
+      "description": "alteração",
+      "price": "9.90"
     },
     {
-      "id": 3,
-      "nome": "Pintura",
-      "descricao": "Pintando o cabelo...",
-      "valor": 55,
-      "duracao": 55
+      "name": "Cabelo",
+      "price": "60.00",
+      "description": "corte",
+      "id": 3
     }
   ]
 }

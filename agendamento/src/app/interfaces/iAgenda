@@ -1,0 +1,11 @@
+export interface iAgenda {
+  "id": string,
+  "id_cliente": string,
+  "id_servico": string,
+  "dia_agend": string,
+  "mes_agend": string,
+  "id_horario": string,
+  "status": string,
+  "observacao": string,
+  "id_pagamento": string
+}
