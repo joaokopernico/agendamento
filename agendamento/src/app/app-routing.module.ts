@@ -1,15 +1,19 @@
-import { FormServicosComponent } from './components/form-servicos/form-servicos.component';
+import { UsuarioAutenticadoGuard } from './services/guards/usuario-autenticado.guard';
+import { UsuarioNaoAutenticadoGuard } from './services/guards/usuario-nao-autenticado.guard';
+import { FormServicosComponent } from './components/pages/form-servicos/form-servicos.component';
 import { HomeComponent } from './views/home/home.component';
-import { FormConfirmaComponent } from './components/agendamento/form-confirma/form-confirma.component';
 import { CalendarioComponent } from './components/agendamento/calendario/calendario.component';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, CanActivate } from '@angular/router';
+import { LoginComponent } from './components/pages/login/login.component';
 
 const routes: Routes = [
-  {path: "", component: HomeComponent},
-  {path: "agendamento/agendar", component: CalendarioComponent},
-  {path: "agendamento/confirma", component: FormConfirmaComponent},
-  {path: "servicos", component: FormServicosComponent},
+  {path: "login", component: LoginComponent, canActivate: [UsuarioNaoAutenticadoGuard]},
+  {path: "", component: HomeComponent, canActivate: [UsuarioAutenticadoGuard],
+   children: [],
+},
+{path: "agendamento/agendar", component: CalendarioComponent, canActivate: [UsuarioAutenticadoGuard]},
+{path: "servicos", component: FormServicosComponent, canActivate: [UsuarioAutenticadoGuard]},
 ];
 
 @NgModule({

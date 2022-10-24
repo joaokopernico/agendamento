@@ -1,10 +1,11 @@
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { Agendamento } from './../agendamento.model';
 import { ConfirmComponent } from '../confirm/confirm.component';
 import { AgendamentoService } from './../agendamento.service';
 import { Component, OnInit } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-
 
 
 @Component({
@@ -19,10 +20,12 @@ export class CalendarioComponent implements OnInit {
   idhorario: any;
   idpagamento: any;
   idservico: any
+  idcliente: any
 
 
   constructor(
-     private AgendamentoService: AgendamentoService,
+    private http: HttpClient,
+     private agendamentoService: AgendamentoService,
      private router: Router,
      private dialog: MatDialog
      ) { }
@@ -32,12 +35,15 @@ export class CalendarioComponent implements OnInit {
 
       const dialogRef = this.dialog.open(ConfirmComponent, {
         width: '250px',
-        data: {dia, mes: this.mes, idhorario: this.idhorario, idpagamento: this.idpagamento, idservico: this.idservico}      //
+        data: {dia, mes: this.mes, idhorario: this.idhorario, idpagamento: this.idpagamento, idservico: this.idservico,
+        idcliente: this.idcliente}      //
      });
 
        dialogRef.afterClosed().subscribe(result => {
         console.log('Diálogo Fechado');
+
         console.log(result)
+
 
 
       })
@@ -86,6 +92,11 @@ export class CalendarioComponent implements OnInit {
       this.construirCalendario();
   }
 
+  showServices(id: string) {
 
+      this.showServices = this.agendamentoService.showServices
+
+
+      }
 
 }

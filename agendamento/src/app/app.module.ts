@@ -1,3 +1,4 @@
+import { UsuarioService } from 'src/app/services/usuario.service';
 import { ConfirmComponent } from './components/agendamento/confirm/confirm.component';
 import { AgendamentoService } from './components/agendamento/agendamento.service';
 import { NgModule } from '@angular/core';
@@ -10,9 +11,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { NavComponent } from './components/template/nav/nav.component';
-import { FormConfirmaComponent } from './components/agendamento/form-confirma/form-confirma.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { CalendarioComponent } from './components/agendamento/calendario/calendario.component';
@@ -26,6 +26,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCommonModule } from '@angular/material/core';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './components/pages/login/login.component';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 registerLocaleData(localeBr);
 
@@ -35,10 +38,11 @@ registerLocaleData(localeBr);
     HeaderComponent,
     FooterComponent,
     NavComponent,
-    FormConfirmaComponent,
     HomeComponent,
     CalendarioComponent,
-    ConfirmComponent
+    ConfirmComponent,
+    LoginComponent,
+
 
 
 
@@ -61,7 +65,9 @@ registerLocaleData(localeBr);
     MatFormFieldModule,
     MatButtonModule,
     MatCommonModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    MatSnackBarModule
 
 
   ],

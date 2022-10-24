@@ -1,3 +1,4 @@
+import { UsuarioService } from 'src/app/services/usuario.service';
 import { ConfirmComponent } from './confirm/confirm.component';
 import { Agendamento } from './agendamento.model';
 import { CalendarioComponent } from './calendario/calendario.component';
@@ -24,6 +25,16 @@ readById(servico: string, id: string): Observable<any> {
   const url = `${this.baseUrl}${servico}/${id}`
     return this.http.get<any>(url)
     }
+
+
+    showServices(id: string) {
+
+      this.http.get(`http://localhost:3000/cliente/`).subscribe(val => console.log(val))
+
+
+     }
+
+
 
 // openDialog() {
 //   const dialogConfig = new MatDialogConfig();
